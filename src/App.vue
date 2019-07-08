@@ -1,23 +1,40 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <tab-bar>
+      <tab-bar-item>
+        <img src="./assets/img/tabbar/home.svg" alt="">
+        <div>首页</div>
+      </tab-bar-item>
+      <tab-bar-item>
+        <img src="./assets/img/tabbar/category.svg" alt="">
+        <div>首页</div>
+      </tab-bar-item>
+      <tab-bar-item>
+        <img src="./assets/img/tabbar/home.svg" alt="">
+        <div>首页</div>
+      </tab-bar-item>
+      <tab-bar-item>
+        <img src="./assets/img/tabbar/home.svg" alt="">
+        <div>首页</div>
+      </tab-bar-item>
+    </tab-bar>
+    <router-view />
   </div>
 </template>
 
 <script>
+import TabBar from './components/tabbar/TabBar'
+import TabBarItem from './components/tabbar/TabBarItem'
 export default {
-  name: 'App'
-}
+  name: "App",
+  components:{
+    TabBar,
+    TabBarItem
+  }
+};
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import "./assets/css/base.css";
+
 </style>
